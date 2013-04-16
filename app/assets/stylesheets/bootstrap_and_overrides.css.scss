@@ -17,6 +17,11 @@ h1,h2,h3,h4,h5,h6 {
   font-family: $jacques;
 }
 
+
+ul > li {
+  line-height: 30px;	
+}
+
 .content {
   margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
 }

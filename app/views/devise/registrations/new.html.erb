@@ -1,12 +1,32 @@
-<h2>Sign up</h2>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), 
-  :html => {:class => 'form-vertical' }) do |f| %>
-  <%= f.error_notification %>
-  <%= display_base_errors resource %>
-  <%= f.input :name, :autofocus => true %>
-  <%= f.input :email, :required => true %>
-  <%= f.input :password, :required => true %>
-  <%= f.input :password_confirmation, :required => true %>
-  <%= f.button :submit, 'Sign up', :class => 'btn-primary-custom' %>
-<% end %>
-<%= render "devise/shared/links" %>
+<div class="row">
+
+  <div class="span6 offset1">
+  	<h3>Sign-up is free!</h3>
+  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet rhoncus scelerisque. Duis sit amet arcu vitae turpis viverra egestas. Vestibulum euismod nisl et ligula tincidunt eget vestibulum felis dictum.</p> 
+
+  	<ul>
+  	  <li>In mollis, dui rhoncus vehicula mattis, risus libero sodales lacus, vitae aliquet mi augue vel.</li> 
+  	  <li>Morbi convallis convallis erat, id rhoncus nisl pellentesque et.</li> 
+  	  <li>Aenean cursus nibh eu lacus pulvinar nec malesuada nibh sagittis.</li> 
+  	  <li>Aliquam lacus neque, consequat sit amet faucibus sit amet, luctus eget tellus.</li> 
+  	</ul>
+
+  	<p>Nullam tellus mauris, elementum ut hendrerit vitae, mattis nec lacus. Nulla elit lacus, pellentesque vel egestas id, hendrerit a quam. Morbi dictum, felis id pulvinar consectetur, diam massa molestie tellus, sit amet cursus lacus dui eu nibh.</p>
+  </div> 
+
+  <div class="span4 offset1">
+  	<h2>Sign up</h2>
+  <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), 
+    :html => {:class => 'form-vertical' }) do |f| %>
+    <%= f.error_notification %>
+    <%= display_base_errors resource %>
+    <%= f.input :name, :autofocus => true %>
+    <%= f.input :email, :required => true %>
+    <%= f.input :password, :required => true %>
+    <%= f.input :password_confirmation, :required => true %>
+    <%= f.button :submit, 'Sign up', :class => 'btn-primary-custom' %>
+  <% end %>
+  <%= render "devise/shared/links" %>
+  </div>
+
+</div>
