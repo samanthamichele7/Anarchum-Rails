@@ -6,10 +6,8 @@ $allerta: Allerta, serif;
 
 body { 
   background: url("content-bg.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-size: 100% auto;
+  min-width: 100%;
   font-family: Garamond, Georgia, serif;
   font-size: 1.2em;
   line-height: 30px;
@@ -20,24 +18,38 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .content {
-  
-  background-repeat: repeat-y;
-  padding: 20px;
   margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
 }
 
+.navbar {
+	border-bottom: 1px solid #b1b1b1;
+}
 
 .navbar-inner {
   background: none !important; 
   border: 0 !important;
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
-  margin: 20px;
   .nav {
-	padding-top: 20px;
+	padding-top: 50px;
 	padding-right: 20px;
 	font-family: $jacques;
-	font-size: .8em;
+	font-size: .9em;
+	li {
+	  a{
+	    color: #000000;
+
+		}
+	}
   }
+}
+
+#index-buttons {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	.btn {
+	  display: inline-block;
+	  font-size: 1.1em;
+    }
 }
 
