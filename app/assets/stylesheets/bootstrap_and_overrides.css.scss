@@ -5,11 +5,14 @@ $jacques:'Jacques Francois', serif;
 $allerta: Allerta, serif;
 
 body { 
-  background-image: url("content-bg.jpg");
-  background-color: #000000;
-  background-position: top center;
-  background-repeat: repeat-y;
-  font-family: $allerta;
+  background: url("content-bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Garamond, Georgia, serif;
+  font-size: 1.2em;
+  line-height: 30px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -19,7 +22,7 @@ h1,h2,h3,h4,h5,h6 {
 .content {
   
   background-repeat: repeat-y;
-  padding: 50px 150px;
+  padding: 20px;
   margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
 }
 
@@ -29,12 +32,12 @@ h1,h2,h3,h4,h5,h6 {
   border: 0 !important;
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
-  margin: 20px 100px 0px 100px;
+  margin: 20px;
   .nav {
 	padding-top: 20px;
 	padding-right: 20px;
 	font-family: $jacques;
-	font-size: 1.2em;
+	font-size: .8em;
   }
 }
 
