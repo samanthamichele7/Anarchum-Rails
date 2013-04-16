@@ -1,3 +1,31 @@
 @import "bootstrap";
-body { padding-top: 60px; }
 @import "bootstrap-responsive";
+
+
+body { 
+  background-image: url("content-bg.jpg");
+  background-color: #000000;
+  background-position: top center;
+  background-repeat: repeat-y;
+}
+
+.content {
+  
+  background-repeat: repeat-y;
+  padding: 50px 150px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+}
+
+
+.navbar-inner {
+  background: none !important; 
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  margin: 20px 100px 0px 100px;
+  .nav {
+	padding-top: 20px;
+	padding-right: 20px;
+  }
+}
+

@@ -1,5 +1,8 @@
-<%= link_to "Anarchum", root_path, :class => 'brand' %>
-<ul class="nav">
+<%= link_to image_tag("anarchumcrown.png"), root_path, :class => 'brand' %>
+<ul class="nav pull-right">
+  <li><a href="#">About</a></li>
+  <li><a href="#">Blog</a></li>
+  <li><a href="#">Forum</a></li>
   <% if user_signed_in? %>
     <li>
     <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
