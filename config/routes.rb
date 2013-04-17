@@ -1,4 +1,8 @@
 Anarchum::Application.routes.draw do
+  get "static_pages/faq"
+
+  get "static_pages/about"
+
   authenticated :user do
     root :to => 'home#index'
   end

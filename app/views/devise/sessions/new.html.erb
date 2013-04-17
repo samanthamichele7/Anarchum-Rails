@@ -1,3 +1,6 @@
+<% provide(:title, "Sign In") %>
+
+<div class="span4 offset2">
 <h2>Sign in</h2>
 <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
   <%= f.input :email, :autofocus => true %>
@@ -6,3 +9,4 @@
   <%= f.button :submit, "Sign in", :class => 'btn-primary-custom' %>
 <% end %>
 <%= render "devise/shared/links" %>
+</div>
