@@ -3,11 +3,16 @@
   <div class="module">
     <div class="module_header">
       <%= category.title %>
-      <span class="controls right smaller">
-        <%= link_to "New Forum", new_forum_path %>
-        <%= link_to "Edit Category", edit_forum_path(category) %>
-        <%= link_to "Delete Category", forum_path(category), :confirm => "Are you sure you want to delete this category?", :method => :delete %>
-      </span>
+        <% if current_user %>
+          <% if current_user.admin? %>
+              <span class="controls right smaller">
+                <%= link_to "New Forum", new_forum_path %>
+                <%= link_to "Edit Category", edit_forum_path(category) %>
+                <%= link_to "Delete Category", forum_path(category), :confirm => "Are you sure you want to delete this category?", :method => :delete %>
+              </span>
+          <% end %>
+        <% end %>
+
     </div>
     <% if category.forums.size > 0 %>
     <div>
