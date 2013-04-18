@@ -79,7 +79,7 @@ Anarchum::Application.configure do
     password: ENV["GMAIL_PASSWORD"]
   }
 
-
+config.action_mailer.default_url_options = { :host => 'anarchum.herokuapp.com' }
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)

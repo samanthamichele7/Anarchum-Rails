@@ -18,6 +18,11 @@
         <div class="container">
           <%= render 'layouts/navigation' %>
         </div>
+        <% if user_signed_in? %>
+          <div class="span4 offset8">
+            Logged in as <strong><%= current_user.username %></strong>
+          </div>
+        <% end %>
       </nav>
     </div>
     </div>
