@@ -18,6 +18,8 @@
 #  name                   :string(255)
 #  username               :string(255)
 #  character_name         :string(255)
+#  topics_count           :integer          default(0)
+#  posts_count            :integer          default(0)
 #
 
 require 'spec_helper'

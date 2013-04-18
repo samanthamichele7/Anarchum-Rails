@@ -23,6 +23,7 @@
 #
 
 class User < ActiveRecord::Base
+
   rolify
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -41,6 +42,6 @@ class User < ActiveRecord::Base
   
 
   def admin?
-    true if self.username == 'admin'
+    true if self.has_role? :admin
   end
 end
