@@ -28,9 +28,16 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
 
+  validates :username, :presence => true, :uniqueness => true
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :username, :character_name
-  
-  validates_presence_of :username
+
+  has_many :topics, :dependent => :destroy
+  has_many :posts, :dependent => :destroy
+
+  def admin?
+    true if self.username == 'admin'
+  end
 end
