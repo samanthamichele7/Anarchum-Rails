@@ -6,28 +6,28 @@
   <div class="module_header"><%= action_name.humanize %> Topic</div>
     <div class="module_subheader smaller"></div>
     <div class="module_body">
-      <div class="fieldset">
+      <div class="fieldset forum-label">
         <span class="label indent smaller">
-          <%= f.label :title %><br />
+          <%= f.label :title %>
           <small>(Required)</small>
         </span>
         <span class="input indent smaller"><%= f.text_field :title, :size => 75 %></span>
         <div class="clear"></div>
-      </div>
+      </div><br />
       <% unless @topic.id %>
-      <div class="fieldset">
+      <div class="fieldset forum-label">
         <span class="label indent smaller">
-          <%= f.label :body %><br />
+          <%= f.label :body %>
           <small>(Required)</small>
         </span>
-        <span class="input indent smaller"><%= f.text_area :body, :cols => 60, :rows => 15 %></span>
+        <span class="input indent smaller"><%= f.text_area :body, :cols => 100, :rows => 15 %></span>
         <div class="clear"></div>
       </div>
     </div>
     <% end %>
     <div class="module_footer">
       <div class="fieldset">
-        <span class="input"><%= f.submit "submit" %> or <%= link_to "cancel", @topic.nil? ?  @topic : @forum %></span>
+        <span class="input"><%= f.submit "submit", :class => "btn btn-primary-custom span2 forum-submit" %> or <%= link_to "cancel", @topic.nil? ?  @topic : @forum %></span>
         <div class="clear"></div>
       </div>
     </div>

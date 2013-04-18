@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: topics
+#
+#  id          :integer          not null, primary key
+#  title       :string(255)
+#  hits        :integer          default(0)
+#  sticky      :boolean          default(FALSE)
+#  locked      :boolean          default(FALSE)
+#  posts_count :integer
+#  forum_id    :integer
+#  user_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class Topic < ActiveRecord::Base
   
   # Associations

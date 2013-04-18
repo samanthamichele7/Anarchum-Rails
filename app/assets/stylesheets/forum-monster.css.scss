@@ -1,6 +1,6 @@
 /* Modules
 --------------------------------------------------------------------------------------------------*/
-.module { border:1px solid #e2e2e2; margin:.8em 0; background-color:#fff; overflow:auto; }
+.module { border: none; margin:.8em 0; background-color: #FFF; overflow:auto; }
 .module_controls { padding:.8em; }
 .module_header { color:#fff; padding:.7em .7em .7em 1.4em; background-color:#000; }
 .module_header a { color:#fff; }
@@ -13,9 +13,9 @@
 --------------------------------------------------------------------------------------------------*/
 .module .fieldset { width:100%; }
 .module .fieldset .indent { width:16em; }
-.module .fieldset .label { font-weight:bold; text-align:right; display:block; float:left; padding:6px 0px 2px 1em; }
+.module .fieldset .label { background-color: none; font-weight:bold; text-align:right; float:left; padding:6px 0px 2px 1em; }
 .module .fieldset .label small { font-weight:normal; }
-.module .fieldset .input { padding:.2em 1em; display:block; float:left; }
+.module .fieldset .input { padding:.2em 1em; float:left; }
 
 /* Common
 --------------------------------------------------------------------------------------------------*/
@@ -23,7 +23,7 @@
 .module .smaller { font-size:.9em; }
 .module .left { float:left; }
 .module .right { float:right; text-align:right; }
-.controls a { margin:0 5px; font-size:.8em; }
+.controls a { margin:0 5px; font-size:1em; }
 
 /* Tables
 --------------------------------------------------------------------------------------------------*/
