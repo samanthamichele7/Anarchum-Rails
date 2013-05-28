@@ -1,8 +1,8 @@
 <div class="module">
-  <div class="module_header"><%= action_name.humanize %> Post</div>
+  <div class="module_header"><%= action_name.humanize %> Reply</div>
     <div class="module_subheader smaller"></div>
     <div class="module_body">
-      <%= form_for [@topic, @post] do |f| %>
+      <%= simple_form_for [@topic, @post] do |f| %>
       <% if @post.errors.any? %>
         <% flash.now[:error] = @post.errors.full_messages.join(', and ') %>
       <% end %>
@@ -11,7 +11,7 @@
           <%= f.label :body %><br />
           <small>(Required)</small>
         </span>
-        <span class="input indent smaller"><%= f.text_area :body, :cols => 60, :rows => 15 %></span>
+        <span class="input"><%= f.input :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %></span>
         <div class="clear"></div>
       </div>
     </div>

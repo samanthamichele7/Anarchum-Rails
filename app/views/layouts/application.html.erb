@@ -40,5 +40,15 @@
         </div>
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->
+  
+<script>
+  $(document).ready(function(){  
+    $('form[data-remote]').bind("ajax:before", function(){
+      for (instance in CKEDITOR.instances){
+        CKEDITOR.instances[instance].updateElement();
+      }
+    });
+  });
+</script>
   </body>
 </html>

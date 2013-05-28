@@ -19,5 +19,11 @@ class Ability
     can :create, Post, :topic => { :locked => false } unless user.new_record?
     can :create, Topic unless user.new_record?
 
+    # Always performed
+    can :access, :ckeditor   # needed to access Ckeditor filebrowser
+
+    # Performed checks for actions:
+    can [:read, :create, :destroy], Ckeditor::Picture
+    can [:read, :create, :destroy], Ckeditor::AttachmentFile
   end
 end

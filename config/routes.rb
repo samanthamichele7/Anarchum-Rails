@@ -1,5 +1,7 @@
 Anarchum::Application.routes.draw do
   
+  mount Ckeditor::Engine => '/ckeditor'
+
   resources :categories, :except => [:index, :show]
   resources :forums, :except => :index do
     resources :topics, :shallow => true, :except => :index do
@@ -26,4 +28,5 @@ Anarchum::Application.routes.draw do
   
   devise_for :users
   resources :users
+
 end

@@ -10,6 +10,8 @@ gem "simple_form", ">= 2.1.0"
 gem "figaro", ">= 0.6.3"
 gem 'forum_monster'
 gem 'bb-ruby'
+gem "ckeditor"
+gem "paperclip"
 
 group :development do
   gem 'sqlite3', '1.3.5'
